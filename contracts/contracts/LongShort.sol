@@ -53,7 +53,7 @@ contract LongShort is ILongShort, Initializable {
   mapping(uint32 => address) public paymentTokens;
   mapping(uint32 => address) public yieldManagers;
   mapping(uint32 => address) public oracleManagers;
-  mapping(uint32 => uint256) public marketTreasurySplitGradient_e18;
+  mapping(uint32 => uint256) public marketTreasurySplitGradient_e18; // (0 < value < 1e18)
 
   /* ══════ Market + position (long/short) specific ══════ */
   mapping(uint32 => mapping(bool => address)) public syntheticTokens;
